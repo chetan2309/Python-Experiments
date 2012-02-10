@@ -1,0 +1,2 @@
+recursive-include twitter/public *
+recursive-include twitter/templates *
