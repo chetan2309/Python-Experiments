@@ -57,6 +57,16 @@ class Tree(object):
         else:
             return self.TreeSize(root.right) + self.TreeSize(root.left) + 1
         
+    def maxDepth(self, root):
+        if root == None:
+            return 0
+        else:
+            # computes the two depths
+            ldepth = self.maxDepth(root.left)
+            rdepth = self.maxDepth(root.right)
+            # returns the appropriate depth
+            return max(ldepth, rdepth) + 1
+        
         
 if __name__ == '__main__':
     # create the binary tree
